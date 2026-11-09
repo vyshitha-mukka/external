@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Build Docker Image"
-                bat "docker build --no-cache -t sample:v1 ." 
+                bat "docker build --no-cache -t sample1:v1 ." 
             }
         }
         stage('Docker Login') {
@@ -16,9 +16,9 @@ pipeline {
         stage('push Docker Image to Docker Hub') {
             steps {
                 echo "push Docker Image to Docker Hub"
-                bat "docker tag sample:v1 vyshitha/exam:latest"               
+                bat "docker tag sample1:v1 vyshitha/exam1:latest"               
                     
-                bat "docker push vyshitha/exam:latest"
+                bat "docker push vyshitha/exam1:latest"
                 
             }
         }
