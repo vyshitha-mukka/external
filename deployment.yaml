@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myfirst-deployment
+  name: myfirst1-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: myfirst
+      app: myfirst1
   template:
     metadata:
       labels:
-        app: myfirst
+        app: myfirst1
     spec:
       containers:
-        - name: myfirst
-          image: vyshitha/exam:latest
+        - name: myfirst1
+          image: vyshitha/exam1:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5001
