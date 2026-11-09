@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubedemoapp-deployment
+  name: myfirst-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: kubedemoapp
+      app: myfirst
   template:
     metadata:
       labels:
-        app: kubedemoapp
+        app: myfirst
     spec:
       containers:
-        - name: kubedemoapp
-          image: vyshitha/sample:kubeimage2
+        - name: myfirst
+          image: vyshitha/exam:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5001
